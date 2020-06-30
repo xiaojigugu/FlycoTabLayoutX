@@ -1,5 +1,10 @@
 # FlycoTabLayout
+
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FlycoTabLayout-green.svg?style=true)](https://android-arsenal.com/details/1/2756)
+[![](https://jitpack.io/v/xiaojigugu/FlycoTabLayoutX.svg)](https://jitpack.io/#xiaojigugu/FlycoTabLayoutX)
+
+
+The original rep: [FlycoTabLayout](https://github.com/H07000223/FlycoTabLayout)
 #### [中文版](https://github.com/H07000223/FlycoTabLayout/blob/master/README_CN.md)
 An Android TabLayout Lib has 3 kinds of TabLayout at present.
 
@@ -32,11 +37,11 @@ can be used freely with other widgets together.
 * SegmentTabLayout
 
 ## Demo
-![](https://github.com/H07000223/FlycoTabLayout/blob/master/preview_1.gif)
+![](https://s1.ax1x.com/2020/06/30/N4hOBV.gif)
 
-![](https://github.com/H07000223/FlycoTabLayout/blob/master/preview_2.gif)
+![](https://s1.ax1x.com/2020/06/30/N4hLn0.gif)
 
-![](https://github.com/H07000223/FlycoTabLayout/blob/master/preview_3.gif)
+![](https://s1.ax1x.com/2020/06/30/N4hbXq.gif)
 
 
 >## Change Log
@@ -48,29 +53,47 @@ can be used freely with other widgets together.
  > v2.0.2(2016-04-23)
    - remove the dependence of NineOldAnimation(only support 3.0+)
 
+ > AndroidX v1.0(2020-06-30)
+   - Migrate to AndroidX
+
 
 ## Gradle
 
 ```groovy
 dependencies{
-    compile 'com.android.support:support-v4:23.1.1'
-    compile 'com.nineoldandroids:library:2.4.0'
-    compile 'com.flyco.roundview:FlycoRoundView_Lib:1.1.2@aar'
-    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:1.5.0@aar'
+    implementation 'com.android.support:support-v4:23.1.1'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.flyco.roundview:FlycoRoundView_Lib:1.1.2@aar'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:1.5.0@aar'
 }
 
 After v2.0.0
 dependencies{
-    compile 'com.android.support:support-v4:23.1.1'
-    compile 'com.nineoldandroids:library:2.4.0'
-    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.0@aar'
+    implementation 'com.android.support:support-v4:23.1.1'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.0@aar'
 }
 
 After v2.0.2(support 3.0+)
 dependencies{
-    compile 'com.android.support:support-v4:23.1.1'
-    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.android.support:support-v4:23.1.1'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
 }
+
+After AndroidX v1.0
+
+// Add it in your root build.gradle at the end of repositories:
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+// Add the dependency
+    	dependencies {
+	        implementation 'com.github.xiaojigugu:FlycoTabLayoutX:v1.0'
+	}
 ```
 
 ## Attributes
